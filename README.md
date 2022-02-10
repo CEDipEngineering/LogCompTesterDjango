@@ -46,7 +46,7 @@ $ python3 auto_test.py git_username repository vx.x.x
 Como o auto_test somente chama um subprocess para executar o código, o computador utilizado precisa ser capaz de compilar e executar o código.
 
 O auto_testes tambem tem algumas constantes no começo do código, elas são:
-1. acepeted_languages - lista das linguagem que esse programa foi testado com, se uma linguagem não estiver aqui o codigo da um raise, já que isso nunca deveria acontecer.
+1. accepted_languages - lista das linguagem que esse programa foi testado com, se uma linguagem não estiver aqui o codigo da um raise, já que isso nunca deveria acontecer.
 2. compile_languages - lista as linguagens que precisam de uma etapa de compilação antes da execução.
 3. maxtime - tempo maximo que cada teste deve rodar antes de dar um timeout em segundos (é um float).
 4. direct_input -(True ou False) diz se é passado o conteúdo de um teste, em vez do caminho dele, é usado para as versões baixas.
