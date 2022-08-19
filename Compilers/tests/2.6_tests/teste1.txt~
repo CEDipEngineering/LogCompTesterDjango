@@ -1,0 +1,6 @@
+{
+ int x;
+ int y;
+ int z;
+ z=2*x-60/y
+}

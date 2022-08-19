@@ -1,7 +1,9 @@
-int main(){
-    println(5*5);
-    println(5/5);
-    println(0/5);
-    println(1/2);
-    println(50*50);
+void main()
+{
+
+  /* Single var */
+  int x_1;
+  x_1 = 1;
+  printf(x_1);
+
 }

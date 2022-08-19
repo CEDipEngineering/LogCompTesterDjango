@@ -7,9 +7,9 @@ import db.db_conn as db
 import issuer_pusher as ip
 
 #Constantes
-accepted_languages = ["python","rust_cargo","C++","C#"]
+accepted_languages = ["python","rust_cargo","javascript","C++","C#"]
 compile_languages = ["C++","C#"]
-maxtime = 30.0 #Timeout para cada teste, em segundos
+maxtime = 10.0 #Timeout para cada teste, em segundos
 assembly = False
 assembly_test = 1
 #extension = '.txt'
@@ -52,22 +52,79 @@ def test_main(DIR, git_username, repository, release, version):
             return True
 
     #caso seja a versão 3.0
-    if assembly:
+    if version == 'v3.0': # assembly:
         test_file = os.path.abspath(DIR +"/teste{!s}".format(assembly_test) + extension)
         #stdin_file = os.path.abspath(DIR +"/inputs/input{!s}.txt".format(i))
         #sol_file = DIR +"/sol{!s}.txt".format(i)
         args[-1] = test_file
         try:
             output,output_error = get_program_output(src_file,language,args)
-            if output_error:
-                print(output_error)
-                return True
-            return False
+            # Error
+            if (output_error):
+                failed_test = True
+                report += "Mas algo saiu no stderror(que não deveria): \n{!s}\n\n".format(str(output_error))
+            else:
+
+                # Mount
+                args = ['nasm','-f','elf32','-F','dwarf','-g','']
+                args[-1] = os.path.abspath(DIR +"/teste{!s}".format(assembly_test) + '.asm')
+                output,output_error = get_program_output(src_file,language,args)
+                # Error
+                if (output_error):
+                  failed_test = True
+                  report += "Mas algo saiu no stderror(que não deveria): \n{!s}\n\n".format(str(output_error))
+                else:
+
+                  # Link
+                  args = ['ld','-m','elf_i386','-o','teste{!s}'.format(assembly_test),'']
+                  args[-2] = os.path.abspath(DIR +"/teste{!s}".format(assembly_test))
+                  args[-1] = os.path.abspath(DIR +"/teste{!s}".format(assembly_test) + '.o')
+                  output,output_error = get_program_output(src_file,language,args)
+                  #Error
+                  if (output_error):
+                    failed_test = True
+                    report += "Mas algo saiu no stderror(que não deveria): \n{!s}\n\n".format(str(output_error))
+                  else:
+
+                    # Run
+                    args = [os.path.abspath(DIR +"/teste{!s}".format(assembly_test))]
+                    output,output_error = get_program_output(src_file,language,args)
+            
+                    # Error
+                    #with open('a.txt','w') as f:
+                    #  f.write('\n'+output+' - '+output_error+' - '+str(str(output) == '5'))
+                    result = assertEquals('5', output)
+                    if not result:
+                      report += "teste{!s}: falha no executável: Resultado errado\n".format(str(assembly_test))
+                      # report = write_input_stdin(report,input_test,test_stdin)
+                      #report += "output esperado: \n{!s}\n\noutput recebido: \n\n{!s}\n\n".format(str(sol),str(output))
+                      failed_test = True
+                      if (output_error):
+                        report += "Mas algo saiu no stderror(que não deveria): \n{!s}\n\n".format(str(output_error))
+                      else:
+                        report += "\n"
+
+            #with open('a.txt','a') as f:
+            #    f.write('\n'+output+' - '+output_error)
+
+            #if output_error:
+            #    print(output_error)
+            #    return True
+            #return False
         except subprocess.TimeoutExpired:
-            print("Assemble timeout")
-            return True
-    
-    for i in range(1,size_test + 1):
+            failed_test = True
+            report += "teste{!s}: falha\n".format(str(assembly_test))
+            report += "Timeout, teste demorou mais de {} segundo para rodar, assumo que entrou em um loop infinito\n\n".format(str(maxtime))
+            #print("Assemble timeout")
+            #return True
+        try:
+            os.remove(os.path.abspath(DIR +"/teste{!s}".format(assembly_test)))
+            os.remove(os.path.abspath(DIR +"/teste{!s}".format(assembly_test) + '.o'))
+            os.remove(os.path.abspath(DIR +"/teste{!s}".format(assembly_test) + '.asm'))
+        except:
+            pass
+    else:
+      for i in range(1,size_test + 1):
         test_file = os.path.abspath(DIR +"/teste{!s}".format(i) + extension)
         stdin_file = os.path.abspath(DIR +"/inputs/input{!s}.txt".format(i))
         sol_file = DIR +"/sol{!s}".format(i) + extension
@@ -98,7 +155,8 @@ def test_main(DIR, git_username, repository, release, version):
             report = write_input_stdin(report,input_test,test_stdin)
             report += "Timeout, teste demorou mais de {} segundo para rodar, assumo que entrou em um loop infinito\n\n".format(str(maxtime))
             failed_test = True
-            continue
+            break
+            #continue
             
 
         if ((not output) and (not output_error)):
@@ -161,8 +219,15 @@ def write_input_stdin(report,input_test,test_stdin):
     return report
 
 def get_program_output(src_file,language,args,test_stdin=None):
-    
-    output = subprocess.run(args,cwd=src_file,input=test_stdin,stderr=subprocess.PIPE,stdout=subprocess.PIPE,timeout=maxtime)
+
+    if language in compile_languages:
+        #print(['main']+[args[-1]])
+        #print(src_file)
+        #print(test_stdin)
+        output = subprocess.run(['./main']+[args[-1]],cwd=src_file,input=test_stdin,stderr=subprocess.PIPE,stdout=subprocess.PIPE,timeout=maxtime)
+        #os.remove(src_file + '/main')
+    else:
+        output = subprocess.run(args,cwd=src_file,input=test_stdin,stderr=subprocess.PIPE,stdout=subprocess.PIPE,timeout=maxtime)
 
     text = output.stdout.decode("utf-8")
     text_error = output.stderr.decode("utf-8")

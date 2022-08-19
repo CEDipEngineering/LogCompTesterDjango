@@ -1,6 +1,16 @@
+int soma(int x, int y) {
 
-{   
-    if (-5 < 4){
-        println(1);
-    }
+  int a;
+  a = x + y;
+  printf(a);
+  return(a);
+}
+
+void main() {
+  int a;
+  int b;
+  a = 3;
+  b = soma(a, 4)+1;
+  printf(a);
+  printf(b);
 }

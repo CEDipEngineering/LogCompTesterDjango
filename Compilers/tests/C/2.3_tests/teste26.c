@@ -1,9 +1,5 @@
-
 {
-    if (! (1==0)) {
-        println(1);
-    }
-    else{
-        println(0);
-    }
+  str x;
+  x = scanf();
+  printf(x+1);
 }

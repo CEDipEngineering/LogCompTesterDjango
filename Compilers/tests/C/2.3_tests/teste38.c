@@ -1,7 +1,8 @@
 {
-    int x;
-    int y;
-    x = readln();
-    y = readln();
-    println(x+y);
+  int a;
+  int b;
+  a = 3;
+  b = 2+1;
+  printf(a);
+  printf(b);
 }

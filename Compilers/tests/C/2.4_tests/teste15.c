@@ -1,3 +1,4 @@
-int main(){
-    println(1);
+void main()
+{
+    if (1==1) else;
 }

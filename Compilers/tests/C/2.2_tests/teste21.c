@@ -1,6 +1,6 @@
 {
-x1 = 3;
-y2 = 4;
-z_final = (x1 + y2) *33;
-println(z_final;
+  if (2<1) {
+    printf(1); 
+
 }
+  else {printf(2);}}

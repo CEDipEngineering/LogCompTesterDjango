@@ -28,12 +28,14 @@ def api_webhook():
                 json.dump(request.json, output)
             if "release" in request.json:
                 if request.json["action"] == "created":
+                    print('a')
                     git_username = request.json["release"]["author"]["login"]
                     repository_name = request.json["repository"]["name"]
                     version = request.json["release"]["tag_name"]
                     print(f'git_username: {git_username}, repository_name: {repository_name}, version: {version}')
                     os.system(f'python3 full_proc.py {git_username} {repository_name} {version} &')
             else:
+                print('b')
                 git_username = request.json["repository"]["owner"]["login"]
                 repository_name = request.json["repository"]["name"]
                 version = request.json["ref"]

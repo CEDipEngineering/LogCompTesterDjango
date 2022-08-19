@@ -115,7 +115,7 @@ CREATE VIEW release_status AS
     LEFT JOIN test_result_status AS trs ON trs.version_name = ver.version_name
                                        AND trs.git_username = rep.git_username
                                        AND trs.repository_name = rep.repository_name
-        WHERE ver.date_from < date('now')
+        WHERE ver.date_from < datetime('now', '-3 hour')
      ORDER BY rep.git_username, trs.repository_name
 """)
 

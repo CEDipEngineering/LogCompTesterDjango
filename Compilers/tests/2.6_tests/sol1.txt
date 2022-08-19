@@ -1,0 +1,17 @@
+lit 0 2 
+
+lod 0 x 
+
+opr 0 4
+
+lit 0 60 
+
+lod 0 y 
+
+opr 0 5
+
+opr 0 2
+
+sto 0 z
+
+

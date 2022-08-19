@@ -1,5 +1,3 @@
 {
-    x = readln();
-    y = readln();
-    println(x+y);
+    if (1==1) else;
 }

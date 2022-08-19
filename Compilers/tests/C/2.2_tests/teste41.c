@@ -1,10 +1,8 @@
 
 {
-    
-    if (30 < 20) {
-    println(0);
-    }
-    else{
-        println(1);
+    x = 1;
+    while (x <10 {
+        x = x + 1;
+        printf(1);
     }
 }

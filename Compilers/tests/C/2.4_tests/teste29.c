@@ -1,9 +1,6 @@
-int main()
+void main()
 {
-    int a;
-    a = 1;
-    while (a < 3){
-        a = a +1;
-        println(a);
-    }
+  str x;
+  x = "a"
+  printf(x-1);
 }

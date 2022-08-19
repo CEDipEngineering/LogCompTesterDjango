@@ -1,6 +1,6 @@
 {
-    int x1;
-    x1 = 3;
-    x1 = x1 +1;
-    println(x1);
+int x1;
+x1 = 3;
+x1 = (x1 +1 * 3);
+printf(x1;
 }

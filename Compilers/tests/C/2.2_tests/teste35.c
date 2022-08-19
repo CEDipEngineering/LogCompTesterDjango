@@ -1,4 +1,3 @@
 {
-    x = readln();
-    println(x);
+    printf(scanf());
 }

@@ -1,3 +1,2 @@
 {
-    println(1);
-}
+  printf(3);

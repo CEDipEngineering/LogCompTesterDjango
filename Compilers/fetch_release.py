@@ -10,8 +10,9 @@ important:
 esse codigo deleta tudo que esta dentro das pastas src e reports
 """
 
+
 GIT_BASE_URL = "git@github.com:"
-CLONE_BASE_PATH = f"src/"
+CLONE_BASE_PATH = f"src"
 
 # get ssh key
 git_ssh_identity_file = os.path.expanduser('~/.ssh/id_rsa')
@@ -34,13 +35,14 @@ def update_repos(git_username, repository, release):
         print(clone_path)
         cur_repo = Repo(clone_path)
         cur_repo.git.reset('--hard')
-        cur_repo.remotes.origin.pull("master")
+        cur_repo.remotes.origin.pull("main")
     
     Git(clone_path).checkout(release)
 
 def clone_repo(git_username, clone_path, git_path):
         print(f"cloning from {git_username}")
         print(clone_path)
+        #os.system('git clone -v git@github.com:raulikeda/teste_logcomp.git src//raulikeda/teste_logcomp')
         Repo.clone_from(git_path, clone_path)
 
 def check_dir():

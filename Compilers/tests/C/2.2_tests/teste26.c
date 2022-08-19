@@ -1,9 +1,6 @@
 
 {
-    if (! (1==0)) {
-        println(1);
-    }
-    else{
-        println(0);
+    if (-1+2 == 3*1-2) {
+        printf(1);
     }
 }

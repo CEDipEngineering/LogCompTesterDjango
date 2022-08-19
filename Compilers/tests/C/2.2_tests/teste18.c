@@ -1,5 +1,4 @@
 {
-println = 19;
-x2 = println;
-println(x2);
+    if (1==1)
+      printf(1);
 }

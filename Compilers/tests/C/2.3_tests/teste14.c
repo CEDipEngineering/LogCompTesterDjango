@@ -1,5 +1,6 @@
 {
-    int 1x;
-    1x = 432;
-    println(1x);
+    int x;
+    x = 1;
+    while x<2 
+    { x = x + 1; printf(1); }
 }

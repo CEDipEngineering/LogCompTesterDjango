@@ -1,6 +1,6 @@
-int main()
+void main()
 {
-    if ((1==1) || (1==0)){
-        println(1);
-    }
+{
+    printf(1);
 }
+

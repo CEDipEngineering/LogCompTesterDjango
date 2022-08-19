@@ -1,3 +1,4 @@
-int main(){
-    println(42);
+void main()
+{
+  Printf(3);
 }

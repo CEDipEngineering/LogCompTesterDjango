@@ -1,6 +1,6 @@
-int main()
-{   
-    if 1==1{
-        println(1);
-    }
+void main()
+{
+  str x;
+  x = "a"
+  printf(x/1);
 }

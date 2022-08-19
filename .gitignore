@@ -5,6 +5,9 @@ Compilers/utils/new-test/.
 Compilers/reports_backup/*
 Compilers/assembly/*
 
+token
+
+src/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

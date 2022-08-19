@@ -1,6 +1,5 @@
-int main()
+void main()
 {
-    if (! (((1>0) || (1==0)) && (0==9))){
-        println(1);
-    }
+  str x;
+  x = scanf();
 }

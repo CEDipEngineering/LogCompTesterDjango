@@ -1,3 +1,3 @@
 {
-    println(42);
+  Printf(3);
 }

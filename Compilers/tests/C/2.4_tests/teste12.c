@@ -1,3 +1,4 @@
-int main(){
-    println(142)
+void main()
+{
+  3 = 2 + 1;
 }

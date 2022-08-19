@@ -1,7 +1,9 @@
+
 {
-    int println;
-    int x2;
-    println = 19;
-    x2 = println;
-    println(x2);
+    int x;
+    x = 1;
+    while (x <10 {
+        x = x + 1;
+        printf(1);
+    }
 }

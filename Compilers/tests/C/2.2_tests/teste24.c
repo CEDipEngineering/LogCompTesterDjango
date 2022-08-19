@@ -1,9 +1,7 @@
 
 {
-    if ((1==1) && (1==0)){
-        println(0);
-    }
-    else{
-        println(1);
+    x = 1;
+    if (!(x==2)) {
+        printf(1);
     }
 }

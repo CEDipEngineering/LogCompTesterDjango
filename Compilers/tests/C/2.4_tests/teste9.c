@@ -1,6 +1,6 @@
-int main(){
-    int x1;
-    x1 = 3;
-    x1 = (x1 +1 * 3;
-    println(x1);
+void main()
+{
+int 1x;
+1x = 432;
+printf(1x);
 }

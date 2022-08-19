@@ -1,9 +1,18 @@
-int main(){
-    int x1;
-    int y2;
-    int z_final;
-    x1 = 3; /* bla bla x1 = 9999998 */
-    y2 = 4;
-    z_final = x1 + y2 *33;
-    println(z_final);
+void main()
+{
+  /* All str operations */
+  str a, b;
+  int x_1, y, z;
+  x_1 = 1; y = 1; z = 2;
+  a = "abc";
+  b = "def";
+  printf(a.b);
+  printf(a.x_1);
+  printf(x_1.a);
+  printf(y.z);
+  printf(a.(x_1==1));
+  printf(a == a);
+  printf(a < b);
+  printf(a > b);
+
 }

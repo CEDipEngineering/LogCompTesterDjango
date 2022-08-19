@@ -1,5 +1,13 @@
-int main(){
-    int x_1x;
-    x_1x = 13;
-    println(x_1x);
+void main()
+{
+    if (1==1) {
+        printf(1);
+    }
+    else {
+        printf(1);
+    }
+    else {
+        printf(1);
+    }
+    
 }

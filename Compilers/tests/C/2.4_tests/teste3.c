@@ -1,7 +1,14 @@
-int main(){int x1;
-    x1 = 3;
-    int y2;
-    y2 = 4;
-    int z_final;
-    z_final = x1 + y2;
-    println(z_final);}
+void main()
+{
+  /* All bool and int operations */
+  int y, z;
+  y = 2;
+  z = (y == 2);
+  printf(y+z);
+  printf(y-z);
+  printf(y*z);
+  printf(y/z);
+  printf(y == z);
+  printf(y < z);
+  printf(y > z);
+}

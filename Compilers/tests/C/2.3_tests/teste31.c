@@ -1,6 +1,5 @@
-
-{   
-    if 1==1{
-        println(1);
-    }
+{
+  str x;
+  x = "a"
+  printf(x/1);
 }

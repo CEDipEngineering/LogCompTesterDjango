@@ -1,6 +1,6 @@
 
 {   
-    if (-5 < 4){
-        println(1);
-    }
+    x = scanf();
+    y = scanf();
+    printf(x+y);
 }

@@ -1,10 +1,5 @@
-int main()
-{   
-    if (0==0){
-        println(1);
-    }
-    else {
-    }
-    else{
-    }
+void main()
+{
+  int x;
+  int x;
 }

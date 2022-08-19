@@ -1,6 +1,6 @@
 
 {
-    else{
-        println(1);
+    if (10 ==) {
+        printf(1);
     }
 }

@@ -1,5 +1,4 @@
 {
-    x = readln();
-    x = readln();
-    println(x);
+    if 1==1 
+    { printf(1); }
 }
