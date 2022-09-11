@@ -1,3 +1,3 @@
 {
-    printf(scanf());
+    Print(scanf());
 }

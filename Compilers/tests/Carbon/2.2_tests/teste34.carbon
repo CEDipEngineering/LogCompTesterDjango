@@ -2,5 +2,5 @@
 {   
     x = scanf();
     y = scanf();
-    printf(x+y);
+    Print(x+y);
 }

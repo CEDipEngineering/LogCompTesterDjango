@@ -1,6 +1,6 @@
 {
   if (1>2)
-    printf(1);
+    Print(1);
   else
-    printf(2);
+    Print(2);
 }

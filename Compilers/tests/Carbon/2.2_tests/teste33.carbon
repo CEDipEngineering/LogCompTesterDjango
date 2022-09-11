@@ -1,5 +1,5 @@
 
 {   
     x = scanf();
-    printf(x);
+    Print(x);
 }

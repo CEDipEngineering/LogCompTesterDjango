@@ -1,4 +1,4 @@
 {
     /* Teste */
-    printf(1);
+    Print(1);
 }

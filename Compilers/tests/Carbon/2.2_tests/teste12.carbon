@@ -1,4 +1,4 @@
 {
 1x = 432;
-printf(1x);
+Print(1x);
 }
