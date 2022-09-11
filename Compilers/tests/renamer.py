@@ -6,6 +6,8 @@ import glob
 
 def main(argv: List) -> int:
     """
+    Function to change all files with extension "x" to extension "y" within a folder (searches sub folders as well).
+
     Usage: python3 editor.py <folder_name> <curr_file_extension> <new_file_extension>
 
     Folder name is name of directory tree root to rename all file extensions.
