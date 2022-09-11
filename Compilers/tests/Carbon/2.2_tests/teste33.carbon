@@ -1,0 +1,5 @@
+
+{   
+    x = scanf();
+    printf(x);
+}
