@@ -1,5 +1,5 @@
 {
-int 1x;
+var 1x : i32;
 1x = 432;
-printf(1x);
+Print(1x);
 }

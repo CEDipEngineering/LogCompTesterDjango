@@ -1,17 +1,17 @@
 {
   /* All str operations */
-  str a, b;
-  int x_1, y, z;
+  var a, b : String;
+  var x_1, y, z : i32;
   x_1 = 1; y = 1; z = 2;
   a = "abc";
   b = "def";
-  printf(a.b);
-  printf(a.x_1);
-  printf(x_1.a);
-  printf(y.z);
-  printf(a.(x_1==1));
-  printf(a == a);
-  printf(a < b);
-  printf(a > b);
+  Print(a.b);
+  Print(a.x_1);
+  Print(x_1.a);
+  Print(y.z);
+  Print(a.(x_1==1));
+  Print(a == a);
+  Print(a < b);
+  Print(a > b);
 
 }

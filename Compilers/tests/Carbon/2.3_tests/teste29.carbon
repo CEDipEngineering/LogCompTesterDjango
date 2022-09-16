@@ -1,5 +1,5 @@
 {
-  str x;
+  var x : String;
   x = "a"
-  printf(x-1);
+  Print(x-1);
 }

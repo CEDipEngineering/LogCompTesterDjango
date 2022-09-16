@@ -1,7 +1,7 @@
 {
-  str x;
+  var x : String;
   x = "a";
-  int y;
+  var y : i32;
   y = 1;
   printf(x==y);
 }

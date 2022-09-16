@@ -1,4 +1,4 @@
 {
-printf = 19;
-x2 = printf;
+Print = 19;
+x2 = Print;
 }

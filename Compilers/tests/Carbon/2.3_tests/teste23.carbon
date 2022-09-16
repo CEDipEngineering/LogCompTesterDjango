@@ -1,5 +1,5 @@
 {
-  int x;
-  str x;
+  var x : i32;
+  var x : String;
 }
 

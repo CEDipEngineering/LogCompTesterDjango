@@ -1,16 +1,16 @@
-int soma(int x, int y) {
+fn soma(x : i32, y : i32) -> i32{
 
-  int x;
+  var x : i32;
   x = y + y;
-  printf(x);
+  Print(x);
   return(x);
 }
 
 void main() {
-  int a;
-  int b;
+  var a : i32;
+  var b : i32;
   a = 3;
   b = soma(a, 4)+1;
-  printf(a);
-  printf(b);
+  Print(a);
+  Print(b);
 }

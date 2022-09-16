@@ -1,11 +1,11 @@
-int soma(int x) {
+fn soma(x : i32) {
 
   if (x < 3) {
-    printf(x);
+    Print(x);
     soma(x+1);
   }
 }
 
-void main() {
+fn main() {
   soma(1);
 }

@@ -1,13 +1,13 @@
-int soma(int x) {
+fn soma(x : i32) -> i32 {
 
   if (x < 3) {
-    printf(x);
+    Print(x);
     x = soma(x+1);
   }
   return(x);  
 }
 
-void main() {
-  int x;
+fn main() {
+  var x : i32;
   x = soma(1);
 }

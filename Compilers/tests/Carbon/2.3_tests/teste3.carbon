@@ -1,13 +1,13 @@
 {
   /* All bool and int operations */
-  int y, z;
+  var y, z : i32;
   y = 2;
   z = (y == 2);
-  printf(y+z);
-  printf(y-z);
-  printf(y*z);
-  printf(y/z);
-  printf(y == z);
-  printf(y < z);
-  printf(y > z);
+  Print(y+z);
+  Print(y-z);
+  Print(y*z);
+  Print(y/z);
+  Print(y == z);
+  Print(y < z);
+  Print(y > z);
 }

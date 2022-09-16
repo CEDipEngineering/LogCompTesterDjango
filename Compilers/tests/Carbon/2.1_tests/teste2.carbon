@@ -1,4 +1,4 @@
 {
-    /* Teste */
+    // Teste 
     Print(1);
 }

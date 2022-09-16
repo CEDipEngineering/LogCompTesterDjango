@@ -1,7 +1,7 @@
 
 {
-    int x;
+    var x : i32;
     x = scanf();
-    printf(x);
+    Print(x);
 }
 }

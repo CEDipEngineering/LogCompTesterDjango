@@ -1,5 +1,5 @@
 {
-  str x;
+  var x : String;
   x = abcd;
 }
 

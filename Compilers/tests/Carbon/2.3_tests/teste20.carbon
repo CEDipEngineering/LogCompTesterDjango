@@ -1,5 +1,5 @@
 
 {
-    int x;
+    var x : i32;
     x = scanf(;
 }

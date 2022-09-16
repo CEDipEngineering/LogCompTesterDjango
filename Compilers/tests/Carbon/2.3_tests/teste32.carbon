@@ -1,4 +1,4 @@
 {
-  int x;
-  int x;
+  var x : i32;
+  var x : i32;
 }

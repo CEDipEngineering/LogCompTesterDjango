@@ -1,8 +1,8 @@
 {
-  int a;
-  int b;
+  var a : i32;
+  var b : i32;
   a = 3;
   b = 2+1;
-  printf(a);
-  printf(b);
+  Print(a);
+  Print(b);
 }

@@ -1,8 +1,8 @@
 {
 
   /* Single var */
-  int x_1;
+  var x_1: i32;
   x_1 = 1;
-  printf(x_1);
+  Print(x_1);
 
 }
