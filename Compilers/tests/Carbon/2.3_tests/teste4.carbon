@@ -1,5 +1,5 @@
 {
-  /* All str operations */
+  // All str operations 
   var a, b : String;
   var x_1, y, z : i32;
   x_1 = 1; y = 1; z = 2;

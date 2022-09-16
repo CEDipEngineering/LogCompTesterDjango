@@ -1,5 +1,5 @@
   {
-    /* v2.2 testing */
+    // v2.2 testing
     var x_1: i32;
     
     x_1 = scanf();
@@ -8,7 +8,7 @@
     }
     else {
         {
-        x_1 = (-20+30)*4*3/40;;;;; /* teste de comentario */
+        x_1 = (-20+30)*4*3/40;;;;; // teste de comentario
         }
     }
     Print(x_1);
