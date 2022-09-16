@@ -1,3 +1,3 @@
 {
-  Printf(3);
+  print(3);
 }
