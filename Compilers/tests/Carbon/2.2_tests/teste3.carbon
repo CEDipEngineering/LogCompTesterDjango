@@ -1,5 +1,5 @@
-{printf(1+1);
-printf(1-1);
-printf(1*1);
-printf(1/1);
-printf(---1);}
+{Print(1+1);
+Print(1-1);
+Print(1*1);
+Print(1/1);
+Print(---1);}

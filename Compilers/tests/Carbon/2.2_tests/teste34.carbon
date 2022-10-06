@@ -1,6 +1,6 @@
 
 {   
-    x = scanf();
-    y = scanf();
+    x = Read();
+    y = Read();
     Print(x+y);
 }

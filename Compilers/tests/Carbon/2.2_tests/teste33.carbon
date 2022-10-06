@@ -1,5 +1,5 @@
 
 {   
-    x = scanf();
+    x = Read();
     Print(x);
 }
