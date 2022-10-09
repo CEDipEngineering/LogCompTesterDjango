@@ -1,0 +1,26 @@
+# Requires some intervention, hitting enter and such
+sudo install.sh
+
+# Log in to mysql will ask for password, hit enter for empty password
+sudo mysql -p
+
+# Update root password
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'ROOT_PASSWORD';
+
+# Create django user
+CREATE USER 'django'@'localhost' IDENTIFIED BY 'NEW_PASSWORD';
+
+# Create Database
+CREATE DATABASE Tests;
+
+# Grant user permissions on database
+GRANT ALL PRIVILEGES ON Tests.* TO 'django'@'localhost';
+
+# Exit mysql
+exit;
+
+# Update env folder with db_cred.cnf file
+[client]
+database = Tests
+user = django
+password = NEW_PASSWORD
