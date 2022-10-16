@@ -1,0 +1,5 @@
+In the env/ directory, add a 'django_cred.cnf' file, with a content similar to the example below:
+    [admin]
+    password=P455W0RD
+
+Recommend using a secure password.
