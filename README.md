@@ -69,3 +69,12 @@ Também é possível gerar um teste que recebe um input, nesse caso é preciso c
 Cuidado com \n se eles existirem como primeira linha input{x}.txt é mandado algo vazio para o stdin provavelmente gerando um teste diferente do esperado.
 
 Usei um código simples que esta dentro de util chamdo simple_test_maker.py para ajudar na criação de novos testes.
+
+
+# Django
+
+To start server, execute:
+
+    $ cd django
+    $ python3 manage.py runserver 0:8000
+
